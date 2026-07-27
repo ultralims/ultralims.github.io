@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação - Dashboard Indicadores de Implantação</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Segoe UI, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background: #ffffff;
+        }
+
+        aside {
+            width: 250px;
+            background: #15203F;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            overflow: auto;
+        }
+
+        aside h2 {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        aside a:hover {
+            background: #15203F;
+        }
+
+        details summary {
+            display: block;
+            padding: 15px 20px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        details summary:hover {
+            background: #15203F;
+        }
+
+        details a {
+            padding-left: 40px;
+            font-size: 14px;
+        }
+
+        details[open] summary {
+            background: #25396d;
+        }
+
+        main {
+            margin-left: 250px;
+            padding: 35px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+
+        h1 {
+            color: #25396d;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #25396d;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background: #25396d;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <aside>
+        <h2>Documentação</h2>
+        <details open>
+            <summary>Resumo</summary>
+
+            <a href="#info">Informações</a>
+            <a href="#fonte">Fonte dos Dados</a>
+            <a href="#colunas_tarefas">Colunas Tabela Tarefas</a>
+            <a href="#colunas_projetos">Colunas Tabela Projetos</a>
+            <a href="#colunas_clockwork">Colunas Tabela Clockwork</a>
+            <a href="#colunas_his">Colunas Tabela HIS</a>
+
+        </details>
+
+        <details>
+
+        <summary>Gestão</summary>
+
+        <a href="#graficos_gestao">Gráficos</a>
+
+        </details>
+
+        <details>
+
+        <summary>Dia a Dia</summary>
+
+        <a href="#graficos_dia_a_dia">Gráficos</a>
+
+        </details>
+
+        <details>
+
+        <summary>Visão do Cliente</summary>
+
+        <a href="#graficos_visao_do_cliente">Gráficos</a>
+
+        </details>
+
+        <details>
+
+        <summary>Clockwork</summary>
+
+        <a href="#graficos_clockwork">Gráficos</a>
+
+        </details>
+    </aside>
+
+    <main>
+
+        <div class="card" id="info">
+
+            <h1>Dashboard de Acompanhamento de Projetos</h1>
+
+            <p>
+                Documentação técnica do dashboard.
+            </p>
+
+            <table>
+
+                <tr>
+                    <td>Versão</td>
+                    <td>2.0</td>
+                </tr>
+           
+                <tr>
+                    <td>Publicado em:</td>
+                    <td>07/2026</td>
+                </tr>
+
+                <tr>
+                    <td>Link</td>
+                    <td>https://app.powerbi.com/groups/533a44b0-0101-4fe2-bb04-edd9f0e665b8/list?language=pt-BR&experience=power-bi</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="card" id="fonte">
+            <h2>Fonte dos Dados</h2>
+            <table>
+
+                <tr>
+                    <th>Tabela</th>
+                    <th>Fonte</th>
+                    <th>Link</th>
+                    <th>Calculo/Filtro</th>
+                    <th>Extrações Programadas</th>
+                </tr>
+
+                <tr>
+                    <td>Projetos</td>
+                    <td>Jira</td>
+                    <td>Power BI Connector - https://powerbi-cloud-prod.alphaservesp.com/api/export/power-bi/b9675ff3d47200ea873a7d808d05002b</td>
+                    <td> - </td>
+                    <td> 7h - 10h - 12h - 15h - 20h (Diariamente)</td>
+                </tr>
+
+                <tr>
+                    <td>Tarefas</td>
+                    <td>Jira</td>
+                    <td>Power BI Connector - https://powerbi-cloud-prod.alphaservesp.com/api/export/power-bi/b9675ff3d47200ea873a7d808d05002b</td>
+                    <td> - </td>
+                    <td> 7h - 10h - 12h - 15h - 20h (Diariamente)</td>
+                </tr>
+
+                <tr>
+                    <td>HIS</td>
+                    <td>Jira</td>
+                    <td>Power BI Connector - https://powerbi-cloud-prod.alphaservesp.com/api/export/power-bi/0744dbce9944705d0aeaf514fa43cac0</td>
+                    <td> project = "História do Cliente" </td>
+                    <td> 7h - 10h - 12h - 15h - 20h (Diariamente)</td>
+                </tr>
+
+                <tr>
+                    <td>Worklogs</td>
+                    <td>Jira</td>
+                    <td>Power BI Connector - https://powerbi-cloud-prod.alphaservesp.com/api/export/power-bi/b9675ff3d47200ea873a7d808d05002b</td>
+                    <td> - </td>
+                    <td> 7h - 10h - 12h - 15h - 20h (Diariamente)</td>
+                </tr>
+
+                <tr>
+                    <td>Ultima Atualização</td>
+                    <td>Calculo (Power BI)</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>date_dimension_date</td>
+                    <td>CSV</td>
+                    <td>https://github.com/ultralims/Business-Intelligence-e-Processos</td>
+                    <td> - </td>
+                    <td> Modelo estatico contendo datas de 01/01/2020 a 31/12/2050</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="card" id="colunas_tarefas">
+
+            <h2>Colunas Tabela Tarefas</h2>
+
+            <table>
+                <tr>
+                    <th>Nome Extração</th>
+                    <th>Nome Tratado</th>
+                    <th>Nome Jira</th>
+                    <th>Observação</th>
+                    <th>Cálculo</th>
+                </tr>
+                
+                <tr>
+                    <td>ISSUE_KEY</td>
+                    <td>Tarefa Chave</td>
+                    <td>Chave</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>ISSUE_TYPE_NAME</td>
+                    <td>Tarefa Tipo</td>
+                    <td>Tipo</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>ISSUE_STATUS_NAME</td>
+                    <td>Tarefa Status</td>
+                    <td>Status</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>SUMMARY</td>
+                    <td>Tarefa Título</td>
+                    <td>Resumo</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                 
+                <tr>
+                    <td>PRIORITY</td>
+                    <td>Tarefa Prioridade</td>
+                    <td>Prioridade</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>START_DATE_10015</td>
+                    <td>Data Início</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>PROJECT_KEY</td>
+                    <td>Projeto Chave</td>
+                    <td>Chave do espaço</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>CURRENT_ASSIGNEE_NAME</td>
+                    <td>Tarefa Responsável</td>
+                    <td>Responsável</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>UPDATED</td>
+                    <td>Atualizado em</td>
+                    <td> - </td>
+                    <td>Esse campo não é visível nos cards</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>DUE_DATE</td>
+                    <td>Data Limite</td>
+                    <td>Data limite</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>TIME_SPENT</td>
+                    <td>Tempo Gasto</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Marco_do_Projeto_10551</td>
+                    <td>Marco do Projeto</td>
+                    <td>Marco do Projeto</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>Tempo_Planejado_Semana_1_13485</td>
+                    <td>Hrs Planejadas (Semana 1)</td>
+                    <td>Tempo Planejado (Semana 1)</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Tempo_Planejado_Semana_2_13518</td>
+                    <td>Hrs Planejadas (Semana 2)</td>
+                    <td>Tempo Planejado (Semana 2)</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Tempo_Planejado_Semana_3_13519</td>
+                    <td>Hrs Planejadas (Semana 3)</td>
+                    <td>Tempo Planejado (Semana 3)</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Tempo_Planejado_Semana_4_13520</td>
+                    <td>Hrs Planejadas (Semana 4)</td>
+                    <td>Tempo Planejado (Semana 4)</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Tempo_Planejado_Semana_5_13521</td>
+                    <td>Hrs Planejadas (Semana 5)</td>
+                    <td>Tempo Planejado (Semana 5)</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td> - </td>
+                    <td>Responsável</td>
+                    <td> - </td>
+                    <td>Cálculo dentro do Power BI</td>
+                    <td>= each
+                            if [Tarefa Responsável] <> null then
+                                [Tarefa Responsável]
+                            else if [Tarefa Tipo] = "Atividade do Cliente" then
+                                "Atividade do Cliente"
+                            else if [Tarefa Tipo] = "Atividade de Gestão" and "Tarefa" then
+                                "Gerente de Projetos"
+                            else
+                                "Não Iniciado pelo Consultor"
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> - </td>
+                    <td>Link</td>
+                    <td> - </td>
+                    <td>Cálculo dentro do Power BI</td>
+                    <td>= each "https://ultralims.atlassian.net/browse/" & [Tarefa Chave], type text
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> - </td>
+                    <td>Filtro Atividade</td>
+                    <td> - </td>
+                    <td>Cálculo dentro do Power BI</td>
+                    <td>= each if [Tarefa Tipo] = "Atividade do Cliente" then
+                            "Atividade do Cliente"
+                                else
+                                    [Tarefa Status]
+                    </td>
+                </tr>
+                    <td> - </td>
+                    <td>Possui Apontamento</td>
+                    <td> - </td>
+                    <td>Cálculo dentro do Power BI</td>
+                    <td>= if 
+                            [#"Hrs Planejadas (Semana 1)"] <> null
+                            or [#"Hrs Planejadas (Semana 2)"] <> null
+                            or [#"Hrs Planejadas (Semana 3)"] <> null
+                            or [#"Hrs Planejadas (Semana 4)"] <> null
+                            or [#"Hrs Planejadas (Semana 5)"] <> null
+                        then 
+                            "Sim"
+                        else 
+                            "Não"</td>
+                <tr>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="card" id="colunas_projetos">
+
+            <h2>Colunas Tabela Projetos</h2>
+
+            <table>
+                <tr>
+                    <th>Nome Cru</th>
+                    <th>Nome Tratado</th>
+                    <th>Nome Jira</th>
+                    <th>Observação</th>
+                </tr>
+
+                <tr>
+                    <td>PROJECT_KEY</td>
+                    <td>Projeto Chave</td>
+                    <td>Chave do espaço</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>NAME</td>
+                    <td>Projeto Nome</td>
+                    <td>Nome</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>CATEGORY</td>
+                    <td>Projeto Categoria</td>
+                    <td>Categoria</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>LEAD_NAME</td>
+                    <td>Projeto Responsável</td>
+                    <td>Proprietário do espaço</td>
+                    <td> - </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card" id="colunas_clockwork">
+
+            <h2>Colunas Tabela Clockwork</h2>
+
+            <table>
+                <tr>
+                    <th>Nome Cru</th>
+                    <th>Nome Tratado</th>
+                    <th>Nome Jira</th>
+                    <th>Observação</th>
+                </tr>
+
+                <tr>
+                    <td>LOGGED_TIME</td>
+                    <td>Hrs Apontadas</td>
+                    <td>Chave do espaço</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>START_DATE</td>
+                    <td>Data Registro</td>
+                    <td>Nome</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>ISSUE_KEY</td>
+                    <td>Tarefa Chave</td>
+                    <td>Chave</td>
+                    <td> - </td>
+                </tr>
+                
+                <tr>
+                    <td>AUTHOR_NAME</td>
+                    <td>Responsável Registro</td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td> - </td>
+                    <td>Projeto Chave</td>
+                    <td> - </td>
+                    <td>Esta coluna não possui origem direta na extração dos dados. Ela foi derivada a partir da coluna "Tarefa Chave"</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card" id="colunas_his">
+
+            <h2>Colunas Tabela HIS</h2>
+
+            <table>
+                <tr>
+                    <th>Nome Cru</th>
+                    <th>Nome Tratado</th>
+                    <th>Nome Jira</th>
+                    <th>Observação</th>
+                </tr>
+
+                <tr>
+                    <td>PRO_Código_Interno_Cliente_13523</td>
+                    <td>Projeto Chave</td>
+                    <td>PRO: Código Interno Cliente</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>ORIGINAL_ESTIMATE</td>
+                    <td>Estimativa Original</td>
+                    <td>Hrs Estimativa Original</td>
+                    <td> - </td>
+                </tr>
+
+                <tr>
+                    <td>Negociação_da_Mensalidade_13524</td>
+                    <td>Negociação da Mensalidade</td>
+                    <td>Negociação da Mensalidade</td>
+                    <td> - </td>
+                </tr>
+
+            </table>
+        </div>
+
+        
+        <div class="card" id="graficos_gestao">
+
+            <h2>Graficos Gestão</h2>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Filtros do Visual</th>
+                    <th>Filtros de Seleção</th>
+                    <th>Resumo</th>
+                </tr>
+
+                <tr>
+                    <td>Total Horas (Realizado)</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Projeto Responsável, Projeto Nome,  Fase do Projeto, Projeto Categoria</td>
+                    <td>Soma de todas as horas apontadas nas atividades, incluindo tarefas com status Concluído.</td>
+                </tr>
+                
+                <tr>
+                    <td>Total Horas (Previsto)</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Projeto Responsável, Projeto Nome,  Fase do Projeto, Projeto Categoria</td>
+                    <td>Soma das horas do campo Estimativa Original, incluindo tarefas com status Concluído.</td>
+                </tr>
+                
+                <tr>
+                    <td>Horas Vendidas</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Projeto Responsável, Projeto Nome, Projeto Categoria</td>
+                    <td>Soma das horas da Estimativa Original dos cards do projeto HIS.</td>
+                </tr>
+
+                <tr>
+                    <td>Qntd. Projetos Ativos</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Projeto Responsável, Projeto Nome, Projeto Categoria</td>
+                    <td>Contagem Distinta dos Projetos pela Chave.</td>
+                </tr>
+
+                <tr>
+                    <td>% Realizado x % Previsto</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Projeto Responsável, Projeto Nome,  Fase do Projeto, Projeto Categoria</td>
+                    <td>Compara o percentual de horas realizadas e previstas por cliente/projeto. O ideal é manter equilíbrio próximo de 50% previsto e 50% realizado. Quando o realizado supera o previsto, indica consumo acima das horas vendidas/planejadas (estouro de horas).</td>
+                </tr>
+                
+                <tr>
+                    <td>Marcos do Projeto Atividades</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Marco do Projeto = Sim</td>
+                    <td>Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Lista as tarefas onde o campo Marco do Projeto é marcado como "Sim". Tarefas concluídas são desconsideradas.</td>
+                </tr>
+                
+                <tr>
+                    <td>Distribuição das Horas Restantes por Tipo (%)</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa and Hrs Restantes > 0 </td>
+                    <td>Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Mostra a participação percentual das horas restantes por tipo de atividade. O valor exibido no centro representa a soma total das horas restantes. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+                <tr>
+                    <td>Distribuição das Tarefas por Tipo (%) – Geral</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído</td>
+                    <td>Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Mostra a distribuição percentual da quantidade total de tarefas por tipo. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+                <tr>
+                    <td>Distribuição das Tarefas por Tipo (%)</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa </td>
+                    <td>Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Mostra a distribuição percentual das tarefas por tipo, desconsiderando atividades administrativas/gestão. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+                <tr>
+                    <td>Tarefas por Tipo</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa</td>
+                    <td>Data Limite, Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Mapa de calor que apresenta a quantidade de tarefas por tipo e responsável, facilitando a identificação de concentração de demanda e carga operacional. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Subtarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+                <tr>
+                    <td>Tarefas por Fase</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Subarefa, Tarefa</td>
+                    <td>Data Limite, Projeto Responsável, Projeto Nome, Fase do Projeto, Projeto Categoria</td>
+                    <td>Exibe a quantidade de tarefas por fase do projeto e status atual, permitindo acompanhar a distribuição das atividades ao longo do fluxo de implantação. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Subtarefa. Tarefas concluídas são desconsideradas.</td>
+            </table>
+        </div>
+
+        <div class="card" id="graficos_dia_a_dia">
+
+            <h2>Graficos Dia a Dia</h2>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Filtros do Visual</th>
+                    <th>Filtros de Seleção</th>
+                    <th>Resumo</th>
+                </tr>
+
+                <tr>
+                    <td>Qntd. Atividades Críticas Pendentes</td>
+                    <td> - </td>
+                    <td>Prioridade = Very High and Tarefa Status != Concluído</td>
+                    <td>Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Contagem das tarefas com Prioridade = Very High que ainda estão pendentes. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+                
+                <tr>
+                    <td>Qntd. Atividades Pendentes (Geral)</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa</td>
+                    <td>Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Contagem total das atividades pendentes. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+                 <tr>
+                    <td>Atividades Críticas Pendentes</td>
+                    <td> - </td>
+                    <td>Prioridade = Very High and Tarefa Status != Concluído</td>
+                    <td>Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Lista das atividades com Prioridade = Very High, exibindo projeto, chave da tarefa, título, Tarefa status, responsável e data limite. Tarefas concluídas são desconsideradas.</td>
+                </tr>   
+
+                 <tr>
+                    <td>Atividades Pendentes - Geral</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa</td>
+                    <td>Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Visão analítica das atividades pendentes por responsável, incluindo horas planejadas por semana, horas realizadas, horas restantes e quantidade de tarefas. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>    
+
+                 <tr>
+                    <td>Qntd. Atividades com Data Limite no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa</td>
+                    <td>Data Limite, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Contagem das atividades cuja Data Limite está dentro do período selecionado no filtro. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>    
+
+                 <tr>
+                    <td>Atividades com Data Limite no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Tipo != Atividade de Gestão, Oportunidade Identificada, Tarefa</td>
+                    <td>Data Limite, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Lista das atividades com Data Limite dentro do período filtrado, permitindo acompanhar entregas previstas e possíveis vencimentos. Exclui atividades em que o Tipo é Gestão, Oportunidade Identificada e Tarefa. Tarefas concluídas são desconsideradas.</td>
+                </tr>    
+
+                 <tr>
+                    <td>Qntd. Atividades Concluídas no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status = Concluído</td>
+                    <td>Data da Ultima Atualização, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Contagem das atividades finalizadas dentro do período selecionado.</td>
+                </tr>
+
+                 <tr>
+                    <td>Qntd. Atividades Movimentadas no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído</td>
+                    <td>Data da Ultima Atualização, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Contagem das atividades que tiveram movimentação/atualização no período selecionado. Tarefas concluídas são desconsideradas.</td>
+                </tr>    
+                
+                <tr>
+                    <td>Atividades Concluídas no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status = Concluído</td>
+                    <td>Data da Ultima Atualização, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Lista das atividades finalizadas dentro do período selecionado.</td>
+                </tr>   
+
+                <tr> 
+                    <td>Atividades Movimentadas no Período Selecionado</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído</td>
+                    <td>Data da Ultima Atualização, Projeto Responsável, Projeto Nome, Responsável Tarefa, Fase do Projeto, Projeto Categoria</td>
+                    <td>Lista das atividades que sofreram movimentação dentro do período selecionado, permitindo acompanhar alterações recentes e o andamento operacional. Tarefas concluídas são desconsideradas.</td>
+                </tr>   
+
+            </table>
+        </div>
+
+        <div class="card" id="graficos_visao_do_cliente">
+
+            <h2>Graficos Visão do Cliente</h2>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Filtros do Visual</th>
+                    <th>Filtros de Seleção</th>
+                    <th>Resumo</th>
+                </tr>
+
+                <tr>
+                    <td>Atividades por Status (%)</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Mostra a distribuição percentual da quantidade de atividades por Status.</td>
+                </tr>
+                
+                <tr>
+                    <td>Qndt. Atividades por Status</td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Exibe a quantidade total de atividades agrupadas por Status. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+                
+                <tr>
+                    <td>Atividades Em Andamento (%)</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído</td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Mostra a distribuição percentual das atividades não concluídas por Status. </td>
+                </tr>
+                
+                <tr>
+                    <td>Qntd. Atividades Em Andamento</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído</td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Exibe a quantidade total de atividades em andamento agrupadas por Status. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+                
+                <tr>
+                    <td>Lista de Atividades Em Andamento</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Atividade != Aguardando Informações, Atividade do Cliente, Cliente Aprovando, </td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Lista detalhada das atividades atualmente em andamento. Exclui atividades com Status = Concluído, Aguardando Informações e Cliente Aprovando, além de atividades do tipo Atividade do Cliente. </td>
+                </tr>
+                
+                <tr>
+                    <td>Atividades do Cliente</td>
+                    <td> - </td>
+                    <td>Tarefa Status != Concluído and Atividade = Aguardando Informações, Atividade do Cliente, Cliente Aprovando, </td>
+                    <td>Nome do Projeto, Fase do Projeto</td>
+                    <td>Lista das atividades do tipo Atividade do Cliente que estão aguardando retorno ou validação do cliente. Considera os status Aguardando Informações e Cliente Aprovando. Tarefas concluídas são desconsideradas.</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="card" id="graficos_clockwork">
+
+            <h2>Graficos Clockwork</h2>
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Filtros do Visual</th>
+                    <th>Filtros de Seleção</th>
+                    <th>Resumo</th>
+                </tr>
+
+                <tr>
+                    <td>Tarefas com Hrs Planejadas</td>
+                    <td> - </td>
+                    <td>Possui Apontamento = Sim</td>
+                    <td>Projeto Responsável, Projeto Nome, Responsável da Atividade</td>
+                    <td>Atividades com Planejamento de Horas "Semanas 1,2,3,4 e 5", considerando o "Responsável" da Tarefa.</td>
+                </tr>
+
+                <tr>
+                    <td>Apontamento de Horas por Profissional</td>
+                    <td> - </td>
+                    <td>Horas Apontadas (Clockwork) > 0</td>
+                    <td>Data de Apontamento, Projeto Responsável, Projeto Nome, Responsável da Atividade</td>
+                    <td>Apresenta a análise dos apontamentos registrados no Clockwork por profissional. (O Responsável do Registro refere-se ao usuário que realizou o apontamento no Clockwork e não necessariamente ao responsável da tarefa apontada.)</td>
+                </tr>
+                
+                <tr>
+                    <td>Atividades com Apontamento de Horas</td>
+                    <td> - </td>
+                    <td>Tipo != Tarefa and Horas Apontadas (Clockwork) > 0</td>
+                    <td>Data de Apontamento, Projeto Responsável, Projeto Nome, Responsável da Atividade</td>
+                    <td>Lista das atividades que receberam apontamentos de horas no Clockwork.</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <footer>
+            Versão 2.0 ©
+        </footer>
+
+    </main>
+</body>
+
+</html>
